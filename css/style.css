@@ -84,11 +84,102 @@ a {
   text-decoration: none;
 }
 
+/* SECTION RECHERCHE */
+
+.sectionRecherche {
+  margin-bottom: 20px;
+}
+
+/* TITRES */
+
+.titreRecherche .sstitreRecherche {
+  margin: 5px;
+}
+
+/* Conteneur de la barre de recherche */
+.recherche {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  overflow: hidden;
+  max-width: 500px;
+  margin: 35px 0;
+}
+
+/* Icône de localisation */
+.recherche i {
+  padding: 18px;
+  background-color: var(--main-bg-color);
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  color: black;
+}
+
+/* Champ de recherche */
+.recherche input {
+  flex: 1;
+  border: none;
+  padding: 10px;
+  outline: none;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+/* Bouton de recherche */
+.recherche button {
+  background-color: var(--main-color);
+  color: white;
+  border: none;
+  padding: 15px 25px;
+  cursor: pointer;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  font-weight: 600;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* L’icône de loupe est masquée par défaut sur desktop */
+.icone-bouton {
+  display: none;
+}
+
+/* RESPONSIVE : Afficher la loupe et masquer le texte sur mobile */
+@media (max-width: 768px) {
+  .texte-bouton {
+    display: none;
+  }
+
+  .icone-bouton {
+    display: inline;
+    font-size: 20px;
+  }
+
+  .recherche {
+    border-radius: 20px;
+  }
+
+  .recherche button {
+    padding: 5px;
+    border-radius: 20px;
+    box-shadow: 3px 8px 38px 2px rgba(0, 0, 0, 0.52);
+  }
+
+  .recherche i {
+    background-color: var(--main-color);
+    color: rgb(255, 255, 255);
+  }
+}
+
 /* LES FILTRES */
 
 .filtres {
   display: flex;
   flex-direction: row;
+  gap: 30px;
 }
 
 .filtres h3 {
@@ -108,11 +199,14 @@ a {
   margin: 0;
 }
 
-.filtres .lienFiltre:hover {
+.lienFiltre:hover {
   background-color: #deebff;
 }
 
 .lienFiltre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 50px;
   background-color: #fff;
   border: solid 2px #d9d9d9;
@@ -121,53 +215,31 @@ a {
   cursor: pointer;
   font-size: 17px;
   font-weight: bold;
-  border-radius: 25px 25px;
+  border-radius: 25px;
 }
 
 .lienFiltre .fa-solid {
   margin-right: 10px;
 }
 
-/* BOUTON RECHERCHE */
+/* INFO LOGEMENT */
 
-.recherche {
+.info-logement {
   display: flex;
   align-items: center;
-  border: 1px solid #ccc;
-  border-radius: 15px;
-  overflow: hidden;
-  max-width: 500px;
-  margin-top: 35px;
-  margin-bottom: 35px;
+  gap: 30px;
+  padding: 10px 0;
 }
 
-.recherche i {
-  padding: 18px;
-  background-color: var(--main-bg-color);
-  border-top-left-radius: 15px;
-  border-bottom-left-radius: 15px;
-  color: black;
-}
-
-.recherche input {
-  flex: 1;
-  border: none;
-  padding: 10px;
-  outline: none;
-  font-weight: 600;
-  font-size: 18px;
-}
-
-.recherche button {
-  background-color: var(--main-color);
-  color: white;
-  border: none;
-  padding: 15px 25px;
-  cursor: pointer;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  font-weight: 600;
-  font-size: 18px;
+.info-logement i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--main-color);
+  border: solid 3px #d9d9d9;
+  border-radius: 100%;
+  width: 35px;
+  height: 35px;
 }
 
 /* FIN BOUTON RECHERCHE */
