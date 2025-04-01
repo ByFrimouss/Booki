@@ -142,7 +142,6 @@ a {
   gap: 10px;
 }
 
-/* L’icône de loupe est masquée par défaut sur desktop */
 .icone-bouton {
   display: none;
 }
@@ -155,20 +154,22 @@ a {
 
   .icone-bouton {
     display: inline;
-    font-size: 20px;
+    font-size: 15px;
   }
 
   .recherche {
-    border-radius: 20px;
+    overflow: visible;
   }
 
   .recherche button {
     padding: 5px;
-    border-radius: 20px;
-    box-shadow: 3px 8px 38px 2px rgba(0, 0, 0, 0.52);
+    border-radius: 14px;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.292),
+      0 4px 10px 0 rgba(0, 0, 0, 0.25);
   }
 
   .recherche i {
+    padding: 10px;
     background-color: var(--main-color);
     color: rgb(255, 255, 255);
   }
